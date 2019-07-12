@@ -10,11 +10,15 @@ for (i = 0; i < listItems.length; i++){
 
 function activateItem(){
 	ourHeadline.innerHTML = this.innerHTML;
+	for (i = 0; i < listItems.length; i++){
+	listItems[i].classList.remove("active");
+}
+	this.classList.add("active");
 }
 
 ourButton.addEventListener("click", createNewItem);
 
 function createNewItem(){
-   ourList.innerHTML += "<li>Something New" + newItemCounter + "</li>";
+   ourList.innerHTML += "<li>Something New " + newItemCounter + "</li>";
    newItemCounter++;
 }
